@@ -1,0 +1,109 @@
+2014-05-05 16:36:32,972 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-05-05 16:36:33,356 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-05-05 16:36:33,360 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-05-05 16:36:33,404 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2014-05-05 16:36:33,429 ERROR org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/home/cloudera/workspace/training/output already exists
+2014-05-05 16:36:33,431 ERROR org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/home/cloudera/workspace/training/output already exists
+2014-05-05 16:36:53,156 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2014-05-05 16:36:53,530 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-05-05 16:36:53,536 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2014-05-05 16:36:53,583 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2014-05-05 16:36:53,639 WARN org.apache.hadoop.mapreduce.JobSubmitter: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2014-05-05 16:36:53,648 WARN org.apache.hadoop.mapreduce.JobSubmitter: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2014-05-05 16:36:53,668 INFO org.apache.hadoop.mapred.FileInputFormat: Total input paths to process : 2
+2014-05-05 16:36:53,721 INFO org.apache.hadoop.mapreduce.JobSubmitter: number of splits:2
+2014-05-05 16:36:53,744 WARN org.apache.hadoop.conf.Configuration: mapred.output.value.class is deprecated. Instead, use mapreduce.job.output.value.class
+2014-05-05 16:36:53,744 WARN org.apache.hadoop.conf.Configuration: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+2014-05-05 16:36:53,744 WARN org.apache.hadoop.conf.Configuration: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+2014-05-05 16:36:53,744 WARN org.apache.hadoop.conf.Configuration: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+2014-05-05 16:36:53,748 WARN org.apache.hadoop.conf.Configuration: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+2014-05-05 16:36:53,748 WARN org.apache.hadoop.conf.Configuration: mapred.output.key.class is deprecated. Instead, use mapreduce.job.output.key.class
+2014-05-05 16:36:53,748 WARN org.apache.hadoop.conf.Configuration: mapred.working.dir is deprecated. Instead, use mapreduce.job.working.dir
+2014-05-05 16:36:53,890 INFO org.apache.hadoop.mapreduce.JobSubmitter: Submitting tokens for job: job_local1396724869_0001
+2014-05-05 16:36:54,301 INFO org.apache.hadoop.mapreduce.Job: The url to track the job: http://localhost:8080/
+2014-05-05 16:36:54,303 INFO org.apache.hadoop.mapreduce.Job: Running job: job_local1396724869_0001
+2014-05-05 16:36:54,304 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter set in config null
+2014-05-05 16:36:54,308 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapred.FileOutputCommitter
+2014-05-05 16:36:54,337 INFO org.apache.hadoop.mapred.LocalJobRunner: Waiting for map tasks
+2014-05-05 16:36:54,340 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local1396724869_0001_m_000000_0
+2014-05-05 16:36:54,413 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2014-05-05 16:36:54,426 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/workspace/training/input/words:0+38
+2014-05-05 16:36:54,440 INFO org.apache.hadoop.mapred.MapTask: numReduceTasks: 1
+2014-05-05 16:36:54,451 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2014-05-05 16:36:54,554 INFO org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2014-05-05 16:36:54,561 INFO org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2014-05-05 16:36:54,561 INFO org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2014-05-05 16:36:54,561 INFO org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2014-05-05 16:36:54,561 INFO org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2014-05-05 16:36:54,576 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-05-05 16:36:54,579 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2014-05-05 16:36:54,579 INFO org.apache.hadoop.mapred.MapTask: Spilling map output
+2014-05-05 16:36:54,579 INFO org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 70; bufvoid = 104857600
+2014-05-05 16:36:54,579 INFO org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26214368(104857472); length = 29/6553600
+2014-05-05 16:36:54,602 INFO org.apache.hadoop.mapred.MapTask: Finished spill 0
+2014-05-05 16:36:54,622 INFO org.apache.hadoop.mapred.Task: Task:attempt_local1396724869_0001_m_000000_0 is done. And is in the process of committing
+2014-05-05 16:36:54,632 INFO org.apache.hadoop.mapred.LocalJobRunner: file:/home/cloudera/workspace/training/input/words:0+38
+2014-05-05 16:36:54,632 INFO org.apache.hadoop.mapred.Task: Task 'attempt_local1396724869_0001_m_000000_0' done.
+2014-05-05 16:36:54,632 INFO org.apache.hadoop.mapred.LocalJobRunner: Finishing task: attempt_local1396724869_0001_m_000000_0
+2014-05-05 16:36:54,633 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local1396724869_0001_m_000001_0
+2014-05-05 16:36:54,638 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2014-05-05 16:36:54,641 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/workspace/training/input/words~:0+0
+2014-05-05 16:36:54,642 INFO org.apache.hadoop.mapred.MapTask: numReduceTasks: 1
+2014-05-05 16:36:54,642 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2014-05-05 16:36:54,689 INFO org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2014-05-05 16:36:54,693 INFO org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2014-05-05 16:36:54,693 INFO org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2014-05-05 16:36:54,693 INFO org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2014-05-05 16:36:54,693 INFO org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2014-05-05 16:36:54,694 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-05-05 16:36:54,694 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2014-05-05 16:36:54,696 INFO org.apache.hadoop.mapred.Task: Task:attempt_local1396724869_0001_m_000001_0 is done. And is in the process of committing
+2014-05-05 16:36:54,699 INFO org.apache.hadoop.mapred.LocalJobRunner: file:/home/cloudera/workspace/training/input/words~:0+0
+2014-05-05 16:36:54,699 INFO org.apache.hadoop.mapred.Task: Task 'attempt_local1396724869_0001_m_000001_0' done.
+2014-05-05 16:36:54,700 INFO org.apache.hadoop.mapred.LocalJobRunner: Finishing task: attempt_local1396724869_0001_m_000001_0
+2014-05-05 16:36:54,700 INFO org.apache.hadoop.mapred.LocalJobRunner: Map task executor complete.
+2014-05-05 16:36:54,728 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2014-05-05 16:36:54,737 INFO org.apache.hadoop.mapred.Merger: Merging 2 sorted segments
+2014-05-05 16:36:54,749 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 47 bytes
+2014-05-05 16:36:54,750 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-05-05 16:36:54,764 INFO org.apache.hadoop.mapred.Task: Task:attempt_local1396724869_0001_r_000000_0 is done. And is in the process of committing
+2014-05-05 16:36:54,764 INFO org.apache.hadoop.mapred.LocalJobRunner: 
+2014-05-05 16:36:54,764 INFO org.apache.hadoop.mapred.Task: Task attempt_local1396724869_0001_r_000000_0 is allowed to commit now
+2014-05-05 16:36:54,765 INFO org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task 'attempt_local1396724869_0001_r_000000_0' to file:/home/cloudera/workspace/training/output/_temporary/0/task_local1396724869_0001_r_000000
+2014-05-05 16:36:54,765 INFO org.apache.hadoop.mapred.LocalJobRunner: reduce > reduce
+2014-05-05 16:36:54,765 INFO org.apache.hadoop.mapred.Task: Task 'attempt_local1396724869_0001_r_000000_0' done.
+2014-05-05 16:36:55,306 INFO org.apache.hadoop.mapreduce.Job: Job job_local1396724869_0001 running in uber mode : false
+2014-05-05 16:36:55,322 INFO org.apache.hadoop.mapreduce.Job:  map 100% reduce 100%
+2014-05-05 16:36:55,329 INFO org.apache.hadoop.mapreduce.Job: Job job_local1396724869_0001 completed successfully
+2014-05-05 16:36:55,351 INFO org.apache.hadoop.mapreduce.Job: Counters: 27
+	File System Counters
+		FILE: Number of bytes read=1415
+		FILE: Number of bytes written=511803
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=8
+		Map output bytes=70
+		Map output materialized bytes=67
+		Input split bytes=205
+		Combine input records=8
+		Combine output records=5
+		Reduce input groups=5
+		Reduce shuffle bytes=0
+		Reduce input records=5
+		Reduce output records=5
+		Spilled Records=10
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=47
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=591212544
+	File Input Format Counters 
+		Bytes Read=38
+	File Output Format Counters 
+		Bytes Written=47
