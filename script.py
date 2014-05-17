@@ -156,8 +156,33 @@ key="finalresults/arrayofmergeddata.txt"
 k = Key(mybucket)
 k.key = key
 k.set_contents_from_filename("datatodraw.txt")
+word_group=[]
+for pair in similar_pairs:
+        word_group.append(set(pair))
+has_merged=True
+while has_merged:
+        has_merged=False
+        try:
+                for i in range(0,len(word_group)-1):
+                        group1=word_group[i]
+                        for j in range(i+1,len(word_group)):
+                                group2=word_group[j]
+                                group=group1 | group2
+                                if (len(group1)+len(group2))>len(group)>max(len(group1),len(group2)) or (len(group1)!=len(group2) and len(group)==max(len(group1),len(group2))):
+                                        word_group[i]=group
+                                        group1=group
+                                        print word_group[j]
+                                        del word_group[j]
+                                        has_merged=True
+                                        raise Exception
+        except Exception:
+                pass
+similar_groups=[]
+for wordset in word_group:
+	similar_groups.append(list(wordset))
+        
 f_todraw=open("datatodraw3.txt","w")
-json.dump(similar_pairs,f_todraw)
+json.dump(similar_groups,f_todraw)
 f_todraw.close()
 key="finalresults/mergerecord.txt"
 k = Key(mybucket)
