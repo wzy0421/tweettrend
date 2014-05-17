@@ -3,9 +3,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Tweet Trends</title>
-    <!-- Bootstrap -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -81,9 +84,43 @@
 	  }
     </script>
   </head>
-  <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-	<script>
+  
+  <body style="text-align:center">
+  
+  		
+  		<!---------------------------------- Nav bar ---------------------------------->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1>Tweet Trends</h1>
+                </div>
+            </div>
+        </div>
+
+		<!---------------------------------- Chart ---------------------------------->
+    	<div id="chart_div" style="width: 1000px; height: 500px; float: center;position:relative; margin:0 auto"></div>
+    
+    <div align="center" style="padding:10px">
+    	<button type="button" class="btn btn-primary" onclick="eventButtonClick()">Update Graph</button>
+    </div>
+    	<!---------------------------------- Tags ---------------------------------->
+    	<div class="freshdesignweb"> 
+    		<div class="tags" id="tags">
+  			<ul class="tags-list">
+				<script>
+				for (var word in rawdata[0]){
+				  if (word==0){
+					continue;
+				  }
+				  document.write("<li><a href=\"#\" class=\"tag\">"+rawdata[0][word]);
+				  document.write("</a></li>");
+				}
+				</script>
+			</ul>
+			</div>
+		</div>
+	<!-- 
+<script>
 	  document.write("<div class=\"btn-group\" id=\"wordgroup\" data-toggle=\"buttons\">");
 	  //draw checkbox button group
 	  for (var word in rawdata[0]){
@@ -93,6 +130,7 @@
 		  document.write("<label class=\"btn btn-primary\">");
 		  document.write("<input type=\"checkbox\"> "+rawdata[0][word]);
 		  document.write("</label>");
+		  
 	  }
 	  /*document.write("<label class=\"btn btn-primary\">");
 	  document.write("<input type=\"checkbox\"> Option 2");
@@ -104,7 +142,8 @@
 	  //TODO when checkbox's status changes, update array dict_word
 	  //TODO There are some similar pairs in array similar_tuples. generate a combobox of these pairs, when it is chosen, only words in the pair are displayed in chart(after user click the button)
 	</script>
-	<button onclick="eventButtonClick()">Generate Graph</button>
+ -->
+ 
   </body>
   
 </html>
