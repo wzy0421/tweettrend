@@ -10,7 +10,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -56,7 +59,6 @@
 		dict_word[rawdata[0][index]]=false;//false
 	  }
 	  dict_word[rawdata[0][0]]=true;
-	  //alert(dict_word);
 	  
 	  function drawChart() {//initialize chart
 		var word_index=[0];
@@ -94,17 +96,16 @@
 				word_index.push(dict_word_index[key]);
 			}
 		}
-		//word_index=[0,1,2,3,4,5];
-		//alert(word_index);
+
 	  	new_data=[];
 		for (var trend in rawdata){
-		alert(trend);
+
 			new_data.push([]);
 			for (var index in word_index){
 				new_data[new_data.length-1].push(rawdata[trend][word_index[index]]);
 			}
 		}
-		//alert(new_data);
+
 		return new_data;
 	  }
 	  
@@ -115,7 +116,8 @@
 		chart.draw(data, options);
 	  }
 
-	  function toggleCheckbox(obj,word) {
+	  function toggleCheckbox(word) {
+	  obj = document.getElementById(word);
 
 	  	if(obj.style.color=='white') {
 	  		obj.style.background='#f2f2f3';
@@ -125,27 +127,31 @@
 	  		obj.style.background='#20aae5';
 	  		obj.style.color='white';
 	  	}
-	  	//alert(dict_word[word]);
-	  	//alert(word]);
 	  	
 	  	if(dict_word[word]==true)
  	  		dict_word[word]=false;
  	  	else
  	  		dict_word[word]=true;
+ 	  		
+ 	  	toggleCheckbox("Macs");
 	  	
-	  	//alert(dict_word[word]);
 	  }
     </script>
+    
+    <script type="text/javascript">
+	$(function() {
+		$( document ).tooltip();
+	});
+	</script>
   </head>
   
   <body style="text-align:center">
   
-  		
   		<!---------------------------------- Nav bar ---------------------------------->
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <h1>Tweet Trends</h1>
+                    <h2>Tweet Trends</h2>
                 </div>
             </div>
         </div>
@@ -153,10 +159,14 @@
 		<!---------------------------------- Chart ---------------------------------->
     	<div id="chart_div" style="width: 1000px; height: 500px; float: center;position:relative; margin:0 auto"></div>
     
-    <div align="center" style="padding:10px">
-    	<button type="button" class="btn btn-primary" onclick="eventButtonClick()">Update Graph</button>
-    </div>
-    	<!---------------------------------- Tags ---------------------------------->
+		<!---------------------------------- Button ---------------------------------->
+		<div align="center" style="padding-top:20px">
+			<button type="button" class="btn btn-primary" onclick="eventButtonClick()">Update Graph</button>
+		</div>
+		
+		<hr/>
+    
+        <!---------------------------------- Tags ---------------------------------->
     	<div class="freshdesignweb"> 
     		<div class="tags" id="tags">
   			<ul class="tags-list">
@@ -165,7 +175,7 @@
 				  if (word==0){
 					continue;
 				  }
-				  document.write("<li><a class=\"tag\" onclick=\"toggleCheckbox(this,&quot;"+rawdata[0][word]+"&quot;);\">"+rawdata[0][word]);
+				  document.write("<li><a class=\"tag\" id="+rawdata[0][word]+" onclick=\"toggleCheckbox(&quot;"+rawdata[0][word]+"&quot;);\">"+rawdata[0][word]);
 				  document.write("</a></li>");
 				}
 				</script>
@@ -192,7 +202,8 @@
 	  document.write("<input type=\"checkbox\"> Option 3");
 	  document.write("</label>");*/
 	  document.write("</div>");
-	  //TODO when checkbox's status changes, update array dict_word
+	  //Done when checkbox's status changes, update array dict_word
+	  //图表已经排除重复了？
 	  //TODO There are some similar pairs in array similar_tuples. generate a combobox of these pairs, when it is chosen, only words in the pair are displayed in chart(after user click the button)
 	</script>
  -->
