@@ -4,6 +4,15 @@ body {
                 background-color: #f5f5f5;
 }
 h2 {color:#ffffff}
+
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #111;
+	background-color: #eee;
+	padding: 5px;
+	opacity: 0.85;
+}
 a, a:hover,a:focus{color:#59b329;text-decoration:none;outline:none}
 
 .freshdesignweb { width:960px; height:100%; margin:0 auto; position:relative }
