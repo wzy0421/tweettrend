@@ -13,6 +13,12 @@ h2 {color:#ffffff}
 	padding: 5px;
 	opacity: 0.85;
 }
+
+.ui-tooltip {
+    font: 14px "Helvetica", Sans-Serif !important;
+    max-width: 900px !important;
+  }
+  
 a, a:hover,a:focus{color:#59b329;text-decoration:none;outline:none}
 
 .freshdesignweb { width:960px; height:100%; margin:0 auto; position:relative }
